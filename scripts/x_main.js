@@ -3,39 +3,43 @@ Description: New Site
 Author: Barnum Design
 */	
 
-var $j = jQuery.noConflict();
-$j(document).ready(function(){
+var $ = jQuery.noConflict();
+$(document).ready(function(){
 							
 /////* Global variables */////
-var Loc=document.location.href;
-var breadcrumb=$j('#catalog_crumb');
-var Dir0 = Loc.split('/')[3];
-var Dir1 = Loc.split('/')[4];
-var Dir2 = Loc.split('/')[5];
-var Dir3 = Loc.split('/')[6];
-var Uns1 = Loc.split('_')[1];
-var section="";
+Loc=document.location.href;
+breadcrumb=$('#catalog_crumb');
+Dir0 = Loc.split('/')[3];
+Dir1 = Loc.split('/')[4];
+Dir2 = Loc.split('/')[5];
+Dir3 = Loc.split('/')[6];
+Uns1 = Loc.split('_')[1];
+section="";
 
 /////* Templates */////
 if(Dir1!="index.htm" && Dir1!=""){ // all but the portal
 }
-if(Uns1!="catalog" && Dir1!="index.htm" && Dir1!="") $j('#Top .breadcrumb .main').fadeIn('1000');
+if(Uns1!="catalog" && Dir1!="");
 if(Dir0.substring(0,17)=="CatalogueRetrieve" || Uns1=="product" || Uns1=="catalog" || Dir0.substring(0,15)=="OrderRetrievev2" || Dir0.substring(0,13)=="OrderRetrieve" || Dir0.substring(0,12)=="Default.aspx" || Dir0.substring(0,13)=="MemberProcess") {
-$j('#Wrap').addClass('catalog');
-	if(Uns1=="catalog"){
-	$j('#Wrap').addClass('prod-small');
-	}
-	if(Uns1=="product"){
-	$j('#Wrap').addClass('prod-large');
-	}
+$('.Wrap').addClass('catalog');
 }
-else if(Dir1=="index.htm" || Dir1==""){
+// Product small and large
+if($('.productSmall').height()!=null) $('.Wrap').addClass('prod-small');
+if($('.productLarge').height()!=null) $('.Wrap').addClass('prod-large');
+else if(Dir1==""){
 section="home";
+// Flash embedd
+/*
+var flashvars={};
+var params={play:"true",loop:"false",scale:"noscale",salign:"tl",quality:"high",wmode:"transparent",allowfullscreen:"true",allowscriptaccess:"always"};
+var attributes={};
+swfobject.embedSWF("/flash/banner.swf","intro_banner","675","250","9.0.0",false,flashvars,params,attributes);
+*/
 }
-else if(Dir1=="Products" && (Dir2=="" || Dir2=="index.htm")){
+else if(Dir1=="Products" && Dir2==""){
 section="Products";
 }
-else if(Dir1=="About" && (Dir2=="" || Dir2=="index.htm")){
+else if(Dir1=="About" && Dir2==""){
 section="About";
 }
 else if(Dir1=="Events" || Dir0.substring(0,20)=="AnnouncementRetrieve"){
@@ -46,46 +50,74 @@ section="default";
 }
 
 ///// Fancy Box 
-$j('a.ltbx').fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':true});
-$j('a.ltbx a').fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':true});
-$j('a.ltbx.win').fancybox({'width':600,'height':600,'autoDimensions':false});
-$j("a.ltbx.if").fancybox({'width':'75%','height':'75%','autoScale':false,'transitionIn':'none','transitionOut':'none','type':'iframe'});
+$('a.ltbx').fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':true});
+$('a.ltbx a').fancybox({'transitionIn':'elastic','transitionOut':'elastic','speedIn':600,'speedOut':200,'overlayShow':true});
+$('a.ltbx.win').fancybox({'width':600,'height':600,'autoDimensions':false});
+$("a.ltbx.if").fancybox({'width':'75%','height':'75%','autoScale':false,'transitionIn':'none','transitionOut':'none','type':'iframe'});
+
+///// "Map It" link
+$('.page-body.locations .map-it a').addClass('ltbx if');
 
 ///// Reisizr 
-$j(".resizr img").each(function(){$j(this).cjObjectScaler({method:"fit",fade: 800});});
+$(".resizr img").each(function(){$(this).cjObjectScaler({method:"fit",fade: 800});});
 
-///// Nav
-$j('.s-nav a').each(function(){;
-var SubA=$j(this);
+//// Nav
+$('.s-nav a').each(function(){;
+var SubA=$(this);
 var SubL=this.href;
-	if (SubL==Loc || (SubL.split('/')[3]==Loc.split('/')[3] && SubL.split('/')[4]=="") || SubA.html()==breadcrumb.html() || ($j('#Account')!=null && (SubL.split('/')[3]=="Account" && SubL.split('/')[4]=="") || (Loc.split('/')[3].substring(0,12)=="CaseRetrieve" && SubL.split('/')[4]=="Case_History.htm") || (Loc.split('/')[3].substring(0,19) == "OrderSecureRetrieve" && SubL.split('/')[4] == "Order_History.htm")) || (SubL.split('/')[3]=="Store" && (Loc.split('_')[1]=="catalog" || Loc.split('_')[1]=="product" || Loc.split('/')[3].substring(0,13)=="OrderRetrieve" || Loc.split('/')[3].substring(0,17)=="CatalogueRetrieve")) || (SubL.split('/')[4]== "FAQs.htm" && (Loc.split('/')[3].substring(0,11)=="FAQRetrieve" || Loc.split('/')[3].substring(15,18)=="FAQ"))) {
-	$j(this).attr('class', 'active');
-	$j(this).parents('li').attr('class', 'selected')
+var sDir0 = SubL.split('/')[3];
+var sDir1 = SubL.split('/')[4];
+var sHsh = SubL.split('#')[1];
+	if (SubL==Loc || (sDir0==Dir0 && sHsh==null) || SubA.html()==breadcrumb.html() || ($('#Account')!=null && (sDir0=="Account" && sDir1=="") || (Dir0.substring(0,12)=="CaseRetrieve" && sDir1=="Case_History.htm") || (Dir0.substring(0,19) == "OrderSecureRetrieve" && sDir1 == "Order_History.htm")) || (sDir0=="Store" && (Uns1=="catalog" || Loc.split('_')[1]=="product" || Dir0.substring(0,13)=="OrderRetrieve" || Dir0.substring(0,17)=="CatalogueRetrieve")) || (sDir1== "FAQs.htm" && (Dir0.substring(0,11)=="FAQRetrieve" || Dir0.substring(15,18)=="FAQ"))) {
+	$(this).attr('class', 'active');
+	$(this).parents('li').attr('class', 'selected') // hide to prevent sub nav reveal on load
 	}
 });
 
 ///// SZ Login Nav
 if(loggedin==1){
-$j('.loggedIn').css('display', 'block'); 
+$('.loggedIn').css('display', 'block'); 
 }
 else {
-$j('.loggedOut').css('display', 'block');
+$('.loggedOut').css('display', 'block');
 }
 
+// Forced discount code.
+//var discountcode="Mothersday";
+//$('table.cart tr.discount-code input.discountcodeInput').attr('value',discountcode).trigger("change");
+
 ///// TopNav
-$j('#TopNav > div > ul > li ').mouseover(function(){
-$j(this).siblings().removeClass('selected');
-$j(this).addClass('selected');
- $j(this).mouseleave(function(){
- $j(this).removeClass('selected');
+$('.Top_nav > div > ul > li').removeClass('selected').removeClass('selected'); // add to prevent sub nav reveal on load
+$('#TopNav > div > ul > li ').mouseover(function(){
+$(this).siblings().removeClass('selected');
+$(this).addClass('selected');
+ $(this).mouseleave(function(){
+ $(this).removeClass('selected');
  });
 });
 
 ///// IE6 
-if(IE6_or_below==true){
+if(typeof ie6!=undefined){
 //// Trans bg
-$j('.trans').each(function(){$j(this).height($j(this).parent().outerHeight());});
+$('.trans').each(function(){$(this).height($(this).parent().outerHeight());});
 }
+
+///// Portal jcarousel slideshow
+$('#mycarousel').jcarousel({
+vertical:true,
+scroll: 1,
+visible: 1,
+auto: 5,
+wrap: 'circular',
+});
+
+///// List stripe
+$('ul.stripes.odd li:odd').addClass('stripe');
+$('ul.stripes.even li:even').addClass('stripe');
+$('table.stripes.odd tr:odd').addClass('stripe');
+$('table.stripes.even tr:even').addClass('stripe');
+
+});
 
 //// Google map
 var map = null;	
@@ -113,12 +145,10 @@ function initialize() {
 	}});}}
 
 //// Google map - custom address targetting
-if($j('#gMap_addr').html()!=null){
-var gMap_address=$j("#gMap_addr").html();
-var gMap_title=$j("#gMap_title").html();
+if($('#gMap_addr').html()!=null){
+var gMap_address=$("#gMap_addr").html();
+var gMap_title=$("#gMap_title").html();
 initialize();
 showAddress(gMap_address,gMap_title);
-$j('#Wrap #map_canvas').parent().hide();
+$('#map_canvas').parent().hide();
 }
-
-});

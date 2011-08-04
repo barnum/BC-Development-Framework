@@ -61,6 +61,14 @@ ul.list li li {
 	padding: 6px 0 0 0; 
 	}
 	
+/*--------- dl styling -----------*/
+dl {
+}
+dt {
+}
+dd {
+}
+	
 /*--------- row col styling -----------*/
 ul.cols li {
 	float: left;
@@ -217,8 +225,6 @@ ul.cols li {
 .SZ_nav ul li a:hover {
 	}
 
-/************ Dynamic Menus - END *************/
-
 /*--------- Secure Zone Login -----------*/
 .SZ_login {
 	position: absolute;
@@ -226,9 +232,26 @@ ul.cols li {
 .SZ_login li {
 	display: none;
 	}
-.SZ_login li span {
-	}
 .SZ_login li a {
 	}
 .SZ_login li a:hover {
 	}
+	
+/************ Dynamic Menus - END *************/
+	
+/*--------- Media Queries -----------*/
+
+/* Smaller screens */
+@media only screen and (max-width: 1023px) {
+	
+}
+
+/* iPad */
+@media handheld, only screen and (max-width: 767px) {
+	
+}
+
+/* iPhone */
+@media handheld, only screen and (max-width: 480px) {
+	
+}
