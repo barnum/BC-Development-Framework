@@ -1,0 +1,134 @@
+/*
+Description: New Site
+Author: Barnum Design
+*/	
+
+/***** Zero Settings *****/
+
+html, body, form, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, hr, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	outline: none;
+	}
+table {
+	border-collapse: collapse; 
+	border-spacing: 0;
+	}
+.zero {
+	margin: 0; 
+	padding: 0; 
+	border: 0; 
+	}
+
+/***** Global Settings *****/
+
+html,
+body {
+	height: 100%;
+	}
+body {
+	font-size: 10px;
+	}
+h1, h2, h3, h4, h5, h6 { 
+	font-weight: normal;
+	}
+a {
+	text-decoration: none;
+	}
+
+/***** lists *****/
+
+.list.inside, li.inside { 
+	list-style-position: inside !important;
+	}
+.list.outside, li.outside { 
+	list-style-position: outside !important;
+	}
+.list.lower-roman, li.lower-roman {
+ 	list-style-type:lower-roman !important;
+ 	}
+.list.lower-alpha, li.lower-alpha {
+ 	list-style-type:lower-alpha !important;
+ 	}
+.list.disc, li.disc { 
+	list-style-type: disc !important; 
+	}
+.list.circle, li.circle { 
+	list-style-type: circle !important; 
+	}
+.list.square, li.square { 
+	list-style-type: square !important; 
+	}
+.list.decimal, li.decimal { 
+	list-style-type: decimal !important; 
+	}
+ul.none, ol.none, .list.none, li.none { 
+	list-style-type: none !important; 
+	}
+ 
+/***** Global Classes *****/
+
+.f-l { 
+	float:left; 
+	}
+.f-r { 
+	float:right; 
+	}
+.c-l { 
+	clear:left; 
+	}
+.c-r { 
+	clear:right; 
+	}
+.c-b { 
+	clear:both; 
+	}
+.c-z { 
+	float: none !important;
+	clear:both !important; 
+	height:0 !important;
+	line-height:0 !important;
+	font-size:0 !important;
+	}
+ 
+.t-l { 
+	text-align:left; 
+	}
+.t-r { 
+	text-align:right; 
+	}
+.t-c { 
+	text-align:center; 
+	}
+.t-j { 
+	text-align:justify; 
+	}
+.t-b,
+.bold { 
+	font-weight:bold; 
+	}
+.t-n, 
+.normal { 
+	font-weight:normal; 
+	}
+.t-i, 
+.italic { 
+	font-style:italic; 
+	}
+.t-u, 
+.underline { 
+	text-decoration:underline; 
+	}
+.d-n { 
+	display:none !important; 
+	}
+.d-b { 
+	display: block; 
+	}
+.d-i { 
+	display: inline; 
+	}
+.d-ib { 
+	display: inline-block; 
+	}

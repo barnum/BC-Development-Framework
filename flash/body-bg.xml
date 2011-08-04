@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<all>
+  <section id="default" img="/Intl/images/template/bg/body/info-spread.jpg" />
+  <section id="info-spread" img="/Intl/images/template/bg/body/info-spread.jpg" />
+  <section id="events" img="/Intl/images/template/bg/body/events.jpg" />
+  <section id="departments" img="/Intl/images/template/bg/body/departments.jpg" />
+  <section id="bath-fixtures" img="/Intl/images/template/bg/body/bath-fixtures.jpg" />
+  <section id="bath-fittings" img="/Intl/images/template/bg/body/bath-fittings.jpg" />
+  <section id="accessories" img="/Intl/images/template/bg/body/accessories.jpg" />
+  <section id="hardware" img="/Intl/images/template/bg/body/hardware.jpg" />
+  <section id="lighting" img="/Intl/images/template/bg/body/lighting.jpg" />
+  <section id="resources" img="/Intl/images/template/bg/body/resources.jpg" />
+  <section id="contact" img="/Intl/images/template/bg/body/contact.jpg" />
+  <section id="projects" img="/Intl/images/template/bg/body/projects.jpg" />
+  <section id="finishes" img="/Intl/images/template/bg/body/finishes.jpg" />
+</all>

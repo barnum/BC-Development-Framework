@@ -1,0 +1,155 @@
+/*
+Description: New Site
+Author: Barnum Design
+*/	
+
+
+/* ---- Catalog - Global ---- */
+
+/* ---- Catalog - small view ---- */
+
+/* ---- Catalog - large view ---- */
+
+/* ---- Forms - Global ---- */
+.webForm {
+	clear:both;
+	}
+.webForm.center {
+	margin: 0 auto;
+	}
+.webForm ul {
+	clear:both;
+	}
+.webForm li {
+	float: left;
+	list-style: none;
+	}
+.webForm label {
+	display: block;
+	}
+.webForm.small,
+.webForm .small {
+	width:25%;
+	}
+.webForm.medium,
+.webForm .medium {
+	width:50%;
+	}
+.webForm.large, 
+.webForm .large {
+	width:100%;
+	}
+.webForm input,
+webForm select,
+.webForm textarea {
+	display: block;
+	height: auto;
+	}
+.webForm .small input,
+.webForm .small select,
+.webForm .small textarea {
+	width: 80%;
+	}
+.webForm .medium input,
+.webForm .medium select,
+.webForm .medium textarea {
+	width: 90%;
+	}
+.webForm .large input,
+.webForm .large select,
+.webForm .large textarea {
+	width: 95%;
+	}
+.webForm .small select,  
+.webForm .small .cat_button {
+	width: 90%;
+	}
+.webForm .medium select, 
+.webForm .medium .cat_button {
+	width: 95%;
+	}
+.webForm .large select, 
+.webForm .large .cat_button {
+	width: 97%;
+	}
+.webForm .cat_inline input,
+.webForm .cat_checkbox,  
+.webForm .cat_radio {
+	display: inline !important;
+	width: auto !important;
+	margin:0 5px 0 0;
+	}
+	
+/* - Captcha - */
+.webForm .captcha img {
+	width: 100px;
+	float:left;
+	height:24px;
+	display: block;
+	/*padding-right: 20px;*/
+	}
+.webForm .captcha input {
+	width: 100px;
+	float:left;
+	height:16px;
+	}
+/* -- Custom -- */
+.webForm p.req {
+	margin:0 0 10px 0;
+	color: #805f6d;
+	}
+.webForm li {
+	padding-bottom: 15px;
+	}
+.webForm .item input,
+.webForm .item textarea {
+	padding: 4px 3px;
+	border:0;
+	}
+.webForm .cat_inline input {
+	margin:0 5px 0 0;
+	}
+.webForm label {
+	color: #805f6d;
+	font-size: 140%;
+	padding-bottom: 4px;
+	white-space: nowrap;
+	}
+.webForm select,
+.webForm input,
+.webForm textarea {
+	font-family: 'Times New Roman',Times,serif;
+	font-size:120%;
+	background-color:#e2e1e3;
+	color:#4d4e53;
+	}
+.webForm select {
+	}
+.webForm select option {
+	}
+.webForm .cat_button {
+	padding-top:15px;
+	}
+.webForm .cat_button input {
+	border:0;
+	background-image:;
+	background-position:top left;
+	background-repeat:repeat-x;
+	background-color:transparent !important;
+	height: 37px;
+	font-size: 180%;
+	lettter-spacing:1px;
+	text-transform:uppercase;
+	color:#805f6d;
+	}
+.webForm .cat_button input:hover {
+	cursor:pointer;
+	}
+	
+/* ---- Forms - Global ---- */
+
+/* ---- Forms - Mailing List ---- */
+
+/*---- Shopping Cart ---*/
+
+/* ---- Blogs ---- */
