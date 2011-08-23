@@ -61,16 +61,13 @@ $('.page-body.locations .map-it a').addClass('ltbx if');
 ///// Reisizr 
 $(".resizr img").each(function(){$(this).cjObjectScaler({method:"fit",fade: 800});});
 
-//// Nav
+///// SUPER Nav (.s-nav)
 $('.s-nav a').each(function(){;
 var SubA=$(this);
 var SubL=this.href;
-var sDir0 = SubL.split('/')[3];
-var sDir1 = SubL.split('/')[4];
-var sHsh = SubL.split('#')[1];
-	if (SubL==Loc || (sDir0==Dir0 && sHsh==null) || SubA.html()==breadcrumb.html() || ($('#Account')!=null && (sDir0=="Account" && sDir1=="") || (Dir0.substring(0,12)=="CaseRetrieve" && sDir1=="Case_History.htm") || (Dir0.substring(0,19) == "OrderSecureRetrieve" && sDir1 == "Order_History.htm")) || (sDir0=="Store" && (Uns1=="catalog" || Loc.split('_')[1]=="product" || Dir0.substring(0,13)=="OrderRetrieve" || Dir0.substring(0,17)=="CatalogueRetrieve")) || (sDir1== "FAQs.htm" && (Dir0.substring(0,11)=="FAQRetrieve" || Dir0.substring(15,18)=="FAQ"))) {
+	if (SubL==Loc /* || (SubL.split('/')[3]==Loc.split('/')[3] && SubL.split('/')[4]=="") */ || SubA.html()==breadcrumb.html() || ($('#Account')!=null && (SubL.split('/')[3]=="Account" && SubL.split('/')[4]=="") || (Loc.split('/')[3].substring(0,12)=="CaseRetrieve" && SubL.split('/')[4]=="Case_History.htm") || (Loc.split('/')[3].substring(0,19) == "OrderSecureRetrieve" && SubL.split('/')[4] == "Order_History.htm")) || (SubL.split('/')[3]=="Store" && (Loc.split('_')[1]=="catalog" || Loc.split('_')[1]=="product" || Loc.split('/')[3].substring(0,13)=="OrderRetrieve" || Loc.split('/')[3].substring(0,17)=="CatalogueRetrieve")) || (SubL.split('/')[4]== "FAQs.htm" && (Loc.split('/')[3].substring(0,11)=="FAQRetrieve" || Loc.split('/')[3].substring(15,18)=="FAQ"))) {
 	$(this).attr('class', 'active');
-	$(this).parents('li').attr('class', 'selected') // hide to prevent sub nav reveal on load
+	$(this).parents('li').attr('class', 'selected')
 	}
 });
 
