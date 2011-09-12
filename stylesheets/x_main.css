@@ -6,6 +6,17 @@ Author: Barnum Design
 
 /************ Global - START ************/
 
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
 body {
 	background:;
 	font-family: verdana, arial, helvetica, sans-serif; 
@@ -242,7 +253,7 @@ ul.cols li {
 /*--------- Media Queries -----------*/
 
 /* Smaller screens */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1024px) {
 	
 }
 
