@@ -59,7 +59,13 @@
     <div class="Bottom_nav s-nav"></div>
   </footer>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<!-- Load jQuery from CDN with local fallback -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+	if(typeof jQuery === 'undefined') {
+		document.write(unescape('%3Cscript src="/scripts/jquery-1.6.4.min.js" %3E%3C/script%3E'));
+	}
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
 <script src="/scripts/plugins/jquery.jcarousel.min.js"></script>
 <script src="/scripts/plugins/jquery.easing-1.3.pack.js"></script>
