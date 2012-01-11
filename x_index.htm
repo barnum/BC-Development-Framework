@@ -9,20 +9,22 @@
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<!-- Dev No-Caching -- Remove Before Launch -->
+
+<!-- Dev No-Caching // Remove Before Launch -->
 <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 <META HTTP-EQUIV="PRAGMA" CONTENT="NO-CACHE">
+
 <meta name="robots" content="index,follow"/>
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 <link rel="stylesheet" media="all" href="/stylesheets/x_reset.css" />
 <link rel="stylesheet" media="all" href="/stylesheets/x_module.css" />
 <link rel="stylesheet" media="all" href="/stylesheets/x_main.css" />
 <link rel="stylesheet" media="print" href="/stylesheets/x_print.css" />
 <link rel="stylesheet" media="screen" href="/stylesheets/plugins/jquery.fancybox-1.3.1.css" />
-<link rel="stylesheet" media="screen" href="/stylesheets/plugins/jquery.jcarousel-skin.css" />
-
+<link rel="stylesheet" media="screen" href="/stylesheets/plugins/flexslider.css" />
 <script type="text/javascript">
- loggedin={module_isloggedin};
- document.title="x | {module_pagename}";
+loggedin = "{module_isloggedin}";
+document.title="x | {module_pagename}";
 </script>
 <!--[if lt IE 7]>
 	<link type="text/css" rel="stylesheet" media="all" href="stylesheets/x_ie6.css" />
@@ -33,16 +35,15 @@
 	<script src="scripts/plugins/respond.min.js"></script>
 <![endif]-->
 </head>
+
 <body>
 <div class="Wrap">
   <header>
-      <ul class="SZ_login">
-        <li class="loggedin">Welcome {module_firstname}<span>|</span>{module_logout}<span>|</span><a href="/account/details">Account</a></li>
-        <li class="loggedout"><a href="/Account/Login.htm">Account Login</a><span>|</span><a href="/account/sign-up">Sign Up</a></li>
-      </ul>
-      <div class="Top">
-        <div class="Top_nav"></div>
-      </div>
+    <ul class="SZ_login">
+      <li class="loggedin">Welcome {module_firstname}<span>|</span>{module_logout}<span>|</span><a href="/account/details">Account</a></li>
+      <li class="loggedout"><a href="/Account/Login.htm">Account Login</a><span>|</span><a href="/account/sign-up">Sign Up</a></li>
+    </ul>
+    <div class="Top_nav"></div>
   </header>
   <section class="Sub">
     <div class="Left">
@@ -50,7 +51,7 @@
     </div>
     <div class="Right">
       <div class="Right_nav s-nav"></div>
-      <div class="page-body"></div>
+      <div class="page-body">{tag_pagecontent}</div>
       <br class="c-z" />
     </div>
     <br class="c-z" />
@@ -59,19 +60,20 @@
     <div class="Bottom_nav s-nav"></div>
   </footer>
 </div>
-<!-- Load jQuery from CDN with local fallback -->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+
+<!-- Load jQuery from CDN with local fallback --> 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script> 
 <script>
 	if(typeof jQuery === 'undefined') {
 		document.write(unescape('%3Cscript src="/scripts/jquery-1.6.4.min.js" %3E%3C/script%3E'));
 	}
-</script>
-<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
-<script src="/scripts/plugins/jquery.jcarousel.min.js"></script>
-<script src="/scripts/plugins/jquery.easing-1.3.pack.js"></script>
-<script src="/scripts/plugins/jquery.fancybox-1.3.1.js"></script>
-<script src="/scripts/plugins/jquery.cj-object-scaler.js"></script>
-<script src="/scripts/plugins/cloud-zoom.1.0.2.min.js"></script>
+</script> 
+<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script> 
+<script src="/scripts/plugins/jquery.flexslider-min.js"></script> 
+<script src="/scripts/plugins/jquery.easing-1.3.pack.js"></script> 
+<script src="/scripts/plugins/jquery.fancybox-1.3.1.js"></script> 
+<script src="/scripts/plugins/jquery.cj-object-scaler.js"></script> 
+<script src="/scripts/plugins/cloud-zoom.1.0.2.min.js"></script> 
 <script src="/scripts/x_main.js"></script>
 </body>
 </html>

@@ -55,6 +55,11 @@ $('a.ltbx a').fancybox({'transitionIn':'elastic','transitionOut':'elastic','spee
 $('a.ltbx.win').fancybox({'width':600,'height':600,'autoDimensions':false});
 $("a.ltbx.if").fancybox({'width':'75%','height':'75%','autoScale':false,'transitionIn':'none','transitionOut':'none','type':'iframe'});
 
+
+///// FlexSlider
+$('.flexslider').flexslider();
+
+
 ///// "Map It" link
 $('.page-body.locations .map-it a').addClass('ltbx if');
 
