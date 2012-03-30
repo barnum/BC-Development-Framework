@@ -1,9 +1,5 @@
 <!doctype html>
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7]> <html class="ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
 <title>x</title>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
@@ -22,6 +18,7 @@
 <link rel="stylesheet" media="print" href="/stylesheets/x_print.css" />
 <link rel="stylesheet" media="screen" href="/stylesheets/plugins/jquery.fancybox-1.3.1.css" />
 <link rel="stylesheet" media="screen" href="/stylesheets/plugins/flexslider.css" />
+<script src="/scripts/plugins/modernizr.min.js"></script>
 <script type="text/javascript">
 loggedin = "{module_isloggedin}";
 document.title="x | {module_pagename}";
@@ -29,10 +26,6 @@ document.title="x | {module_pagename}";
 <!--[if lt IE 7]>
 	<link type="text/css" rel="stylesheet" media="all" href="stylesheets/x_ie6.css" />
 	<script src="scripts/plugins/ie6.js"></script>
-<![endif]-->
-<!--[if lt IE 9]>
-	<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<script src="scripts/plugins/respond.min.js"></script>
 <![endif]-->
 </head>
 
@@ -68,12 +61,10 @@ document.title="x | {module_pagename}";
 		document.write(unescape('%3Cscript src="/scripts/jquery-1.6.4.min.js" %3E%3C/script%3E'));
 	}
 </script> 
-<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script> 
 <script src="/scripts/plugins/jquery.flexslider-min.js"></script> 
 <script src="/scripts/plugins/jquery.easing-1.3.pack.js"></script> 
 <script src="/scripts/plugins/jquery.fancybox-1.3.1.js"></script> 
-<script src="/scripts/plugins/jquery.cj-object-scaler.js"></script> 
-<script src="/scripts/plugins/cloud-zoom.1.0.2.min.js"></script> 
+<script src="/scripts/plugins/jquery.cj-object-scaler.js"></script>
 <script src="/scripts/x_main.js"></script>
 </body>
 </html>
