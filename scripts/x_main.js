@@ -17,24 +17,20 @@ Uns1 = Loc.split('_')[1];
 section="";
 
 /////* Templates */////
+//Subjective scripts based on Loc
 if(Dir1!="index.htm" && Dir1!=""){ // all but the portal
 }
 if(Uns1!="catalog" && Dir1!="");
 if(Dir0.substring(0,17)=="CatalogueRetrieve" || Uns1=="product" || Uns1=="catalog" || Dir0.substring(0,15)=="OrderRetrievev2" || Dir0.substring(0,13)=="OrderRetrieve" || Dir0.substring(0,12)=="Default.aspx" || Dir0.substring(0,13)=="MemberProcess") {
 $('.Wrap').addClass('catalog');
 }
+
 // Product small and large
+// This function adds classes to the .Wrap div subject to which eCommerce subPage you're in
 if($('.productSmall').height()!=null) $('.Wrap').addClass('prod-small');
 if($('.productLarge').height()!=null) $('.Wrap').addClass('prod-large');
 else if(Dir1==""){
 section="home";
-// Flash embedd
-/*
-var flashvars={};
-var params={play:"true",loop:"false",scale:"noscale",salign:"tl",quality:"high",wmode:"transparent",allowfullscreen:"true",allowscriptaccess:"always"};
-var attributes={};
-swfobject.embedSWF("/flash/banner.swf","intro_banner","675","250","9.0.0",false,flashvars,params,attributes);
-*/
 }
 else if(Dir1=="Products" && Dir2==""){
 section="Products";
@@ -56,15 +52,36 @@ $('a.ltbx.win').fancybox({'width':600,'height':600,'autoDimensions':false});
 $("a.ltbx.if").fancybox({'width':'75%','height':'75%','autoScale':false,'transitionIn':'none','transitionOut':'none','type':'iframe'});
 
 
+/*	--------------------------------------------------
+	:: Init Scripts
+	
+	General plugin init scripts & custom scripts written
+	just for this site. Put 'em here, yo. 
+	
+	-------------------------------------------------- */
+
 ///// FlexSlider
 $('.flexslider').flexslider();
 
 
-///// "Map It" link
-$('.page-body.locations .map-it a').addClass('ltbx if');
 
-///// Reisizr 
-$(".resizr img").each(function(){$(this).cjObjectScaler({method:"fit",fade: 800});});
+
+
+
+
+
+/*	--------------------------------------------------
+	:: Navigation Scripts
+	
+	These are scripts designed to make in-page navigation
+	freaking magical. 
+	/ / Includes: / / 
+	• SUPERnav
+	• SZ Nav
+	• TopNav selected class fixes
+	
+	-------------------------------------------------- */
+
 
 ///// SUPER Nav (.s-nav)
 $('.s-nav a').each(function(){;
@@ -84,10 +101,6 @@ else {
 $('.loggedOut').css('display', 'block');
 }
 
-// Forced discount code.
-//var discountcode="Mothersday";
-//$('table.cart tr.discount-code input.discountcodeInput').attr('value',discountcode).trigger("change");
-
 ///// TopNav
 $('.Top_nav > div > ul > li').removeClass('selected').removeClass('selected'); // add to prevent sub nav reveal on load
 $('#TopNav > div > ul > li ').mouseover(function(){
@@ -98,26 +111,32 @@ $(this).addClass('selected');
  });
 });
 
+///// List stripe
+$('ul.stripes.odd li:odd').addClass('stripe');
+$('ul.stripes.even li:even').addClass('stripe');
+$('table.stripes.odd tr:odd').addClass('stripe');
+$('table.stripes.even tr:even').addClass('stripe');
+
 ///// IE6 
 if(typeof ie6!=undefined){
 //// Trans bg
 $('.trans').each(function(){$(this).height($(this).parent().outerHeight());});
 }
 
-///// Portal jcarousel slideshow
-$('#mycarousel').jcarousel({
-vertical:true,
-scroll: 1,
-visible: 1,
-auto: 5,
-wrap: 'circular',
-});
 
-///// List stripe
-$('ul.stripes.odd li:odd').addClass('stripe');
-$('ul.stripes.even li:even').addClass('stripe');
-$('table.stripes.odd tr:odd').addClass('stripe');
-$('table.stripes.even tr:even').addClass('stripe');
+///// "Map It" link
+// $('.page-body.locations .map-it a').addClass('ltbx if'); 
+
+///// Reisizr 
+// $(".resizr img").each(function(){$(this).cjObjectScaler({method:"fit",fade: 800});}); 
+
+// Forced discount code.
+//var discountcode="Mothersday";
+//$('table.cart tr.discount-code input.discountcodeInput').attr('value',discountcode).trigger("change");
+
+///// Portal jcarousel slideshow
+//$('#mycarousel').jcarousel({vertical:true, scroll: 1, visible: 1, auto: 5, wrap: 'circular',});
+
 
 });
 
