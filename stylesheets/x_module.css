@@ -1,6 +1,8 @@
 /*
 Description: New Site
-Author: Barnum Design
+Author: @agencyName
+Developer: @developerName
+Date: 2012.20.12
 */	
 
 
@@ -127,7 +129,7 @@ webForm select,
 	}
 .webForm .cat_button {
 	padding:5px;
-	background-color: #55624e;
+	background-color: #76856d;
 	color: #ffffff;
 	}
 .webForm .cat_button input {
